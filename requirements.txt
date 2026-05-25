@@ -1,0 +1,8 @@
+tokenizers>=0.15
+transformers>=4.30
+tiktoken
+pandas
+pyarrow
+datasets
+numpy
+matplotlib

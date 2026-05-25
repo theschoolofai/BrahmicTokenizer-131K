@@ -1,0 +1,673 @@
+
+========================================================================
+  0. Loading Tokenizer
+========================================================================
+  Tokenizer class : PreTrainedTokenizerFast
+  Vocab size      : 131,072
+  Total vocab     : 131,072  (incl. added tokens)
+  BOS token       : '<|begin_of_text|>'  (id=0)
+  EOS token       : '<|end_of_text|>'  (id=1)
+  PAD token       : '<|pad|>'  (id=2)
+  UNK token       : '<|unk|>'  (id=3)
+  Model max len   : 131072
+
+========================================================================
+  DS-A  golden_samples_cleaned_v3.jsonl
+========================================================================
+  Loaded 256 samples
+  Tokenizing:   0%|          | 0/256 [00:00<?, ?doc/s]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+                                                        Tokenized docs : 256
+  Total tokens   : 252,419
+  Avg / doc      : 986.0
+  Max / doc      : 35685
+  ✅  No ghost tags found
+
+========================================================================
+  DS-B  raw_shard.parquet
+========================================================================
+  Total rows     : 630,140
+  Rows to tokenize: 630,140 (full)
+  Ghost-tag sweep (full file) …
+  Sweeping: 0batch [00:00, ?batch/s]  Sweeping: 1batch [00:00,  4.66batch/s]  Sweeping: 2batch [00:00,  4.61batch/s]  Sweeping: 3batch [00:00,  4.56batch/s]  Sweeping: 4batch [00:01,  3.71batch/s]  Sweeping: 5batch [00:01,  3.36batch/s]  Sweeping: 6batch [00:01,  3.07batch/s]  Sweeping: 7batch [00:02,  3.09batch/s]  Sweeping: 8batch [00:02,  3.09batch/s]  Sweeping: 9batch [00:02,  3.33batch/s]  Sweeping: 10batch [00:02,  3.48batch/s]  Sweeping: 11batch [00:03,  3.48batch/s]  Sweeping: 12batch [00:03,  3.44batch/s]  Sweeping: 13batch [00:03,  3.58batch/s]  Sweeping: 14batch [00:03,  3.60batch/s]  Sweeping: 15batch [00:04,  3.69batch/s]  Sweeping: 16batch [00:04,  3.73batch/s]  Sweeping: 17batch [00:04,  3.76batch/s]  Sweeping: 18batch [00:05,  3.81batch/s]  Sweeping: 19batch [00:05,  3.81batch/s]  Sweeping: 20batch [00:05,  3.79batch/s]  Sweeping: 21batch [00:05,  3.88batch/s]  Sweeping: 22batch [00:06,  4.01batch/s]  Sweeping: 23batch [00:06,  4.12batch/s]  Sweeping: 24batch [00:06,  4.20batch/s]  Sweeping: 25batch [00:06,  4.23batch/s]  Sweeping: 26batch [00:06,  4.26batch/s]  Sweeping: 27batch [00:07,  4.29batch/s]  Sweeping: 28batch [00:07,  4.34batch/s]  Sweeping: 29batch [00:07,  4.33batch/s]  Sweeping: 30batch [00:07,  4.10batch/s]  Sweeping: 31batch [00:08,  3.95batch/s]  Sweeping: 32batch [00:08,  3.87batch/s]  Sweeping: 33batch [00:08,  3.87batch/s]  Sweeping: 34batch [00:08,  3.92batch/s]  Sweeping: 35batch [00:09,  3.97batch/s]  Sweeping: 36batch [00:09,  4.04batch/s]  Sweeping: 37batch [00:09,  4.11batch/s]  Sweeping: 38batch [00:09,  4.15batch/s]  Sweeping: 39batch [00:10,  4.30batch/s]  Sweeping: 40batch [00:10,  3.79batch/s]  Sweeping: 41batch [00:10,  3.33batch/s]  Sweeping: 42batch [00:11,  3.14batch/s]  Sweeping: 43batch [00:11,  2.62batch/s]  Sweeping: 44batch [00:13,  1.48batch/s]  Sweeping: 45batch [00:13,  1.67batch/s]  Sweeping: 46batch [00:13,  1.80batch/s]  Sweeping: 47batch [00:14,  1.96batch/s]  Sweeping: 48batch [00:14,  2.03batch/s]  Sweeping: 49batch [00:14,  2.54batch/s]  Sweeping: 50batch [00:15,  2.50batch/s]  Sweeping: 51batch [00:15,  2.83batch/s]  Sweeping: 52batch [00:15,  3.11batch/s]  Sweeping: 53batch [00:16,  3.28batch/s]  Sweeping: 54batch [00:16,  3.46batch/s]  Sweeping: 55batch [00:16,  3.60batch/s]  Sweeping: 56batch [00:16,  3.70batch/s]  Sweeping: 57batch [00:17,  3.87batch/s]  Sweeping: 58batch [00:17,  3.94batch/s]  Sweeping: 59batch [00:17,  4.09batch/s]  Sweeping: 60batch [00:17,  4.17batch/s]  Sweeping: 61batch [00:18,  4.25batch/s]  Sweeping: 62batch [00:18,  4.33batch/s]  Sweeping: 63batch [00:18,  4.38batch/s]                                           Swept 630,140 rows
+  ⚠️   Ghost tag '<|endoftext|>': 3 hits
+  ⚠️   Ghost tag '[SYSTEM]': 2 hits
+  ⚠️   Ghost tag '[USER]': 6 hits
+  Tokenizing 630,140 rows …
+  Tokenizing: 0batch [00:00, ?batch/s]  Tokenizing: 1batch [00:03,  3.63s/batch]  Tokenizing: 2batch [00:07,  4.01s/batch]  Tokenizing: 3batch [00:11,  4.03s/batch]  Tokenizing: 4batch [00:16,  4.10s/batch]  Tokenizing: 5batch [00:20,  4.28s/batch]  Tokenizing: 6batch [00:24,  4.24s/batch]  Tokenizing: 7batch [00:29,  4.26s/batch]  Tokenizing: 8batch [00:33,  4.29s/batch]  Tokenizing: 9batch [00:41,  5.54s/batch]  Tokenizing: 10batch [00:51,  6.75s/batch]  Tokenizing: 11batch [01:02,  8.03s/batch]  Tokenizing: 12batch [01:12,  8.78s/batch]  Tokenizing: 13batch [01:21,  8.69s/batch]  Tokenizing: 14batch [01:29,  8.70s/batch]  Tokenizing: 15batch [01:38,  8.73s/batch]  Tokenizing: 16batch [01:46,  8.29s/batch]  Tokenizing: 17batch [01:51,  7.37s/batch]  Tokenizing: 18batch [01:56,  6.59s/batch]  Tokenizing: 19batch [02:01,  6.22s/batch]  Tokenizing: 20batch [02:06,  5.83s/batch]  Tokenizing: 21batch [02:11,  5.58s/batch]  Tokenizing: 22batch [02:16,  5.51s/batch]  Tokenizing: 23batch [02:21,  5.31s/batch]  Tokenizing: 24batch [02:26,  5.20s/batch]  Tokenizing: 25batch [02:31,  5.14s/batch]  Tokenizing: 26batch [02:36,  5.08s/batch]  Tokenizing: 27batch [02:40,  4.90s/batch]  Tokenizing: 28batch [02:45,  4.86s/batch]  Tokenizing: 29batch [02:50,  4.88s/batch]  Tokenizing: 30batch [02:55,  4.91s/batch]  Tokenizing: 31batch [03:00,  5.00s/batch]  Tokenizing: 32batch [03:05,  5.01s/batch]  Tokenizing: 33batch [03:11,  5.07s/batch]  Tokenizing: 34batch [03:16,  5.11s/batch]  Tokenizing: 35batch [03:21,  5.16s/batch]  Tokenizing: 36batch [03:26,  5.17s/batch]  Tokenizing: 37batch [03:32,  5.33s/batch]  Tokenizing: 38batch [03:38,  5.44s/batch]  Tokenizing: 39batch [03:43,  5.32s/batch]  Tokenizing: 40batch [03:48,  5.26s/batch]  Tokenizing: 41batch [03:52,  5.02s/batch]  Tokenizing: 42batch [03:57,  4.97s/batch]  Tokenizing: 43batch [04:02,  4.96s/batch]  Tokenizing: 44batch [04:06,  4.74s/batch]  Tokenizing: 45batch [04:11,  4.61s/batch]  Tokenizing: 46batch [04:15,  4.61s/batch]  Tokenizing: 47batch [04:20,  4.67s/batch]  Tokenizing: 48batch [04:25,  4.72s/batch]  Tokenizing: 49batch [04:29,  4.61s/batch]  Tokenizing: 50batch [04:34,  4.69s/batch]  Tokenizing: 51batch [04:38,  4.61s/batch]  Tokenizing: 52batch [04:43,  4.60s/batch]  Tokenizing: 53batch [04:47,  4.51s/batch]  Tokenizing: 54batch [04:52,  4.56s/batch]  Tokenizing: 55batch [04:56,  4.53s/batch]  Tokenizing: 56batch [05:01,  4.44s/batch]  Tokenizing: 57batch [05:05,  4.36s/batch]  Tokenizing: 58batch [05:10,  4.46s/batch]  Tokenizing: 59batch [05:16,  5.00s/batch]  Tokenizing: 60batch [05:21,  5.18s/batch]  Tokenizing: 61batch [05:27,  5.26s/batch]  Tokenizing: 62batch [05:33,  5.52s/batch]  Tokenizing: 63batch [05:39,  5.71s/batch]  Tokenizing: 64batch [05:45,  5.70s/batch]  Tokenizing: 65batch [05:50,  5.62s/batch]  Tokenizing: 66batch [05:57,  5.96s/batch]  Tokenizing: 67batch [06:04,  6.13s/batch]  Tokenizing: 68batch [06:08,  5.60s/batch]  Tokenizing: 69batch [06:12,  5.25s/batch]  Tokenizing: 70batch [06:17,  5.21s/batch]  Tokenizing: 71batch [06:24,  5.52s/batch]  Tokenizing: 72batch [06:29,  5.47s/batch]  Tokenizing: 73batch [06:35,  5.69s/batch]  Tokenizing: 74batch [06:40,  5.35s/batch]  Tokenizing: 75batch [06:44,  4.90s/batch]  Tokenizing: 76batch [06:49,  4.94s/batch]  Tokenizing: 77batch [06:54,  4.92s/batch]  Tokenizing: 78batch [06:59,  4.96s/batch]  Tokenizing: 79batch [07:06,  5.78s/batch]  Tokenizing: 80batch [07:12,  5.89s/batch]  Tokenizing: 81batch [07:22,  6.85s/batch]  Tokenizing: 82batch [07:30,  7.31s/batch]  Tokenizing: 83batch [07:37,  7.30s/batch]  Tokenizing: 84batch [07:45,  7.36s/batch]  Tokenizing: 85batch [07:55,  8.15s/batch]  Tokenizing: 86batch [08:07,  9.44s/batch]  Tokenizing: 87batch [08:37, 15.44s/batch]  Tokenizing: 88batch [09:16, 22.58s/batch]  Tokenizing: 89batch [09:26, 18.82s/batch]  Tokenizing: 90batch [09:39, 16.97s/batch]  Tokenizing: 91batch [09:52, 15.81s/batch]  Tokenizing: 92batch [10:01, 13.82s/batch]  Tokenizing: 93batch [10:11, 12.75s/batch]  Tokenizing: 94batch [10:22, 12.17s/batch]  Tokenizing: 95batch [10:34, 12.16s/batch]  Tokenizing: 96batch [10:46, 12.08s/batch]  Tokenizing: 97batch [10:49,  9.46s/batch]  Tokenizing: 98batch [10:53,  7.64s/batch]  Tokenizing: 99batch [11:08,  9.91s/batch]  Tokenizing: 100batch [11:12,  8.24s/batch]  Tokenizing: 101batch [11:17,  7.12s/batch]  Tokenizing: 102batch [11:21,  6.31s/batch]  Tokenizing: 103batch [11:25,  5.70s/batch]  Tokenizing: 104batch [11:30,  5.32s/batch]  Tokenizing: 105batch [11:34,  5.02s/batch]  Tokenizing: 106batch [11:39,  4.85s/batch]  Tokenizing: 107batch [11:43,  4.67s/batch]  Tokenizing: 108batch [11:47,  4.57s/batch]  Tokenizing: 109batch [11:51,  4.48s/batch]  Tokenizing: 110batch [11:56,  4.46s/batch]  Tokenizing: 111batch [12:00,  4.39s/batch]  Tokenizing: 112batch [12:05,  4.43s/batch]  Tokenizing: 113batch [12:08,  4.05s/batch]  Tokenizing: 114batch [12:12,  4.09s/batch]  Tokenizing: 115batch [12:17,  4.24s/batch]  Tokenizing: 116batch [12:21,  4.32s/batch]  Tokenizing: 117batch [12:25,  4.31s/batch]  Tokenizing: 118batch [12:30,  4.28s/batch]  Tokenizing: 119batch [12:34,  4.28s/batch]  Tokenizing: 120batch [12:38,  4.36s/batch]  Tokenizing: 121batch [12:43,  4.30s/batch]  Tokenizing: 122batch [12:47,  4.37s/batch]  Tokenizing: 123batch [12:51,  4.26s/batch]  Tokenizing: 124batch [12:56,  4.31s/batch]  Tokenizing: 125batch [13:00,  4.28s/batch]  Tokenizing: 126batch [13:04,  4.39s/batch]                                              Tokenized docs : 630,140
+  Total tokens   : 1,793,056,360
+  Avg / doc      : 2845.5
+  Max / doc      : 436697
+
+========================================================================
+  DS-C  raw_manifest.parquet  (metadata only)
+========================================================================
+  ℹ️   No 'text' column → metadata analysis only (no tokenization)
+  Total rows       : 629,570
+  Est. total tokens: 755,133,076
+  Avg token_est    : 1199.4
+  Top languages    : {'en': 624570, 'ta': 500, 'as': 500, 'bn': 500, 'hi': 500, 'kn': 500, 'or': 500, 'pa': 500}
+
+========================================================================
+  DS-D  manifest.parquet  (metadata only)
+========================================================================
+  ℹ️   No 'text' column → metadata analysis only (no tokenization)
+  Total rows       : 3,346,792
+  Est. total tokens: 1,862,703,095
+  Avg token_est    : 556.6
+  Top languages    : {'en': 2708189, 'ml': 199072, 'mr': 110671, 'bn': 109496, 'kn': 80719, 'hi': 62322, 'gu': 55140, 'or': 16786}
+
+========================================================================
+  DS-E…K  sft_data/*.txt  (individual files)
+========================================================================
+  group1_assamese.txt:   0%|          | 0/3 [00:00<?, ?chunk/s]  group1_assamese.txt:  33%|███▎      | 1/3 [00:00<00:01,  1.00chunk/s]  group1_assamese.txt:  67%|██████▋   | 2/3 [00:01<00:00,  1.01chunk/s]  group1_assamese.txt: 100%|██████████| 3/3 [00:02<00:00,  1.35chunk/s]                                                                         ✅ group1_assamese.txt                  lines=12,294  tokenized=12,294  avg= 433.2tok  max=  515  unk=0.000%
+  group1_hindi.txt:   0%|          | 0/3 [00:00<?, ?chunk/s]  group1_hindi.txt:  33%|███▎      | 1/3 [00:00<00:01,  1.11chunk/s]  group1_hindi.txt:  67%|██████▋   | 2/3 [00:01<00:00,  1.07chunk/s]  group1_hindi.txt: 100%|██████████| 3/3 [00:02<00:00,  1.13chunk/s]                                                                      ✅ group1_hindi.txt                     lines=14,323  tokenized=14,323  avg= 393.9tok  max=  478  unk=0.000%
+  group1_marathi.txt:   0%|          | 0/4 [00:00<?, ?chunk/s]  group1_marathi.txt:  25%|██▌       | 1/4 [00:00<00:02,  1.19chunk/s]  group1_marathi.txt:  50%|█████     | 2/4 [00:01<00:01,  1.21chunk/s]  group1_marathi.txt:  75%|███████▌  | 3/4 [00:02<00:00,  1.19chunk/s]  group1_marathi.txt: 100%|██████████| 4/4 [00:02<00:00,  1.73chunk/s]                                                                        ✅ group1_marathi.txt                   lines=16,101  tokenized=16,101  avg= 358.2tok  max=  463  unk=0.000%
+  group1_punjabi.txt:   0%|          | 0/4 [00:00<?, ?chunk/s]  group1_punjabi.txt:  25%|██▌       | 1/4 [00:00<00:02,  1.04chunk/s]  group1_punjabi.txt:  50%|█████     | 2/4 [00:01<00:01,  1.06chunk/s]  group1_punjabi.txt:  75%|███████▌  | 3/4 [00:02<00:00,  1.04chunk/s]  group1_punjabi.txt: 100%|██████████| 4/4 [00:03<00:00,  1.38chunk/s]                                                                        ✅ group1_punjabi.txt                   lines=16,852  tokenized=16,852  avg= 421.3tok  max=  750  unk=0.000%
+  group1_telugu.txt:   0%|          | 0/4 [00:00<?, ?chunk/s]  group1_telugu.txt:  25%|██▌       | 1/4 [00:00<00:02,  1.33chunk/s]  group1_telugu.txt:  50%|█████     | 2/4 [00:01<00:01,  1.39chunk/s]  group1_telugu.txt:  75%|███████▌  | 3/4 [00:02<00:00,  1.37chunk/s]  group1_telugu.txt: 100%|██████████| 4/4 [00:02<00:00,  1.67chunk/s]                                                                       ✅ group1_telugu.txt                    lines=17,716  tokenized=17,716  avg= 337.4tok  max=  434  unk=0.000%
+  group2.txt:   0%|          | 0/2 [00:00<?, ?chunk/s]  group2.txt:  50%|█████     | 1/2 [00:01<00:01,  1.64s/chunk]  group2.txt: 100%|██████████| 2/2 [00:02<00:00,  1.46s/chunk]                                                                ✅ group2.txt                           lines= 9,710  tokenized= 9,710  avg=1035.5tok  max= 1540  unk=0.000%
+  group3.txt:   0%|          | 0/1 [00:00<?, ?chunk/s]  group3.txt: 100%|██████████| 1/1 [00:00<00:00,  1.32chunk/s]                                                                ✅ group3.txt                           lines= 2,512  tokenized= 2,512  avg= 966.2tok  max= 1158  unk=0.000%
+  indic_as.txt:   0%|          | 0/23 [00:00<?, ?chunk/s]  indic_as.txt:   9%|▊         | 2/23 [00:00<00:01, 17.89chunk/s]  indic_as.txt:  17%|█▋        | 4/23 [00:00<00:01, 14.31chunk/s]  indic_as.txt:  30%|███       | 7/23 [00:00<00:00, 17.78chunk/s]  indic_as.txt:  39%|███▉      | 9/23 [00:00<00:01, 10.98chunk/s]  indic_as.txt:  48%|████▊     | 11/23 [00:01<00:01,  6.23chunk/s]  indic_as.txt:  52%|█████▏    | 12/23 [00:01<00:01,  5.51chunk/s]  indic_as.txt:  57%|█████▋    | 13/23 [00:01<00:02,  4.87chunk/s]  indic_as.txt:  61%|██████    | 14/23 [00:02<00:02,  4.37chunk/s]  indic_as.txt:  65%|██████▌   | 15/23 [00:02<00:02,  3.96chunk/s]  indic_as.txt:  70%|██████▉   | 16/23 [00:02<00:01,  3.90chunk/s]  indic_as.txt:  74%|███████▍  | 17/23 [00:03<00:01,  3.81chunk/s]  indic_as.txt:  78%|███████▊  | 18/23 [00:03<00:01,  3.68chunk/s]  indic_as.txt:  83%|████████▎ | 19/23 [00:03<00:01,  3.58chunk/s]  indic_as.txt:  87%|████████▋ | 20/23 [00:03<00:00,  3.58chunk/s]  indic_as.txt:  91%|█████████▏| 21/23 [00:04<00:00,  3.63chunk/s]  indic_as.txt:  96%|█████████▌| 22/23 [00:04<00:00,  3.52chunk/s]  indic_as.txt: 100%|██████████| 23/23 [00:04<00:00,  3.78chunk/s]                                                                    ✅ indic_as.txt                         lines=112,172  tokenized=112,172  avg=  91.8tok  max=71161  unk=0.000%
+  indic_bn.txt:   0%|          | 0/16 [00:00<?, ?chunk/s]  indic_bn.txt:   6%|▋         | 1/16 [00:00<00:05,  2.75chunk/s]  indic_bn.txt:  12%|█▎        | 2/16 [00:00<00:04,  3.12chunk/s]  indic_bn.txt:  19%|█▉        | 3/16 [00:00<00:03,  3.37chunk/s]  indic_bn.txt:  25%|██▌       | 4/16 [00:01<00:03,  3.40chunk/s]  indic_bn.txt:  31%|███▏      | 5/16 [00:01<00:03,  3.52chunk/s]  indic_bn.txt:  38%|███▊      | 6/16 [00:01<00:02,  3.57chunk/s]  indic_bn.txt:  44%|████▍     | 7/16 [00:02<00:02,  3.64chunk/s]  indic_bn.txt:  50%|█████     | 8/16 [00:02<00:01,  4.02chunk/s]  indic_bn.txt:  56%|█████▋    | 9/16 [00:02<00:01,  3.83chunk/s]  indic_bn.txt:  62%|██████▎   | 10/16 [00:02<00:01,  3.74chunk/s]  indic_bn.txt:  69%|██████▉   | 11/16 [00:02<00:01,  4.18chunk/s]  indic_bn.txt:  75%|███████▌  | 12/16 [00:03<00:01,  3.89chunk/s]  indic_bn.txt:  81%|████████▏ | 13/16 [00:03<00:00,  3.88chunk/s]  indic_bn.txt:  88%|████████▊ | 14/16 [00:03<00:00,  3.87chunk/s]  indic_bn.txt:  94%|█████████▍| 15/16 [00:04<00:00,  3.27chunk/s]  indic_bn.txt: 100%|██████████| 16/16 [00:04<00:00,  3.98chunk/s]                                                                    ✅ indic_bn.txt                         lines=77,298  tokenized=77,298  avg= 124.5tok  max=16261  unk=0.000%
+  indic_gu.txt:   0%|          | 0/15 [00:00<?, ?chunk/s]  indic_gu.txt:   7%|▋         | 1/15 [00:00<00:04,  3.09chunk/s]  indic_gu.txt:  13%|█▎        | 2/15 [00:00<00:04,  3.08chunk/s]  indic_gu.txt:  20%|██        | 3/15 [00:00<00:03,  3.04chunk/s]  indic_gu.txt:  27%|██▋       | 4/15 [00:01<00:03,  3.03chunk/s]  indic_gu.txt:  33%|███▎      | 5/15 [00:01<00:03,  3.09chunk/s]  indic_gu.txt:  40%|████      | 6/15 [00:02<00:03,  2.83chunk/s]  indic_gu.txt:  47%|████▋     | 7/15 [00:02<00:02,  2.94chunk/s]  indic_gu.txt:  53%|█████▎    | 8/15 [00:02<00:02,  3.04chunk/s]  indic_gu.txt:  60%|██████    | 9/15 [00:02<00:01,  3.03chunk/s]  indic_gu.txt:  67%|██████▋   | 10/15 [00:03<00:01,  3.03chunk/s]  indic_gu.txt:  73%|███████▎  | 11/15 [00:03<00:01,  3.04chunk/s]  indic_gu.txt:  80%|████████  | 12/15 [00:03<00:00,  3.07chunk/s]  indic_gu.txt:  87%|████████▋ | 13/15 [00:04<00:00,  3.03chunk/s]  indic_gu.txt:  93%|█████████▎| 14/15 [00:04<00:00,  3.10chunk/s]  indic_gu.txt: 100%|██████████| 15/15 [00:04<00:00,  3.31chunk/s]                                                                    ✅ indic_gu.txt                         lines=73,475  tokenized=73,475  avg= 149.1tok  max=12474  unk=0.000%
+  indic_hi.txt:   0%|          | 0/23 [00:00<?, ?chunk/s]  indic_hi.txt:  13%|█▎        | 3/23 [00:00<00:00, 22.85chunk/s]  indic_hi.txt:  26%|██▌       | 6/23 [00:00<00:00, 22.67chunk/s]  indic_hi.txt:  39%|███▉      | 9/23 [00:00<00:01, 12.33chunk/s]  indic_hi.txt:  48%|████▊     | 11/23 [00:01<00:01,  6.36chunk/s]  indic_hi.txt:  57%|█████▋    | 13/23 [00:02<00:02,  4.61chunk/s]  indic_hi.txt:  61%|██████    | 14/23 [00:02<00:02,  4.25chunk/s]  indic_hi.txt:  65%|██████▌   | 15/23 [00:02<00:02,  3.92chunk/s]  indic_hi.txt:  70%|██████▉   | 16/23 [00:02<00:01,  3.70chunk/s]  indic_hi.txt:  74%|███████▍  | 17/23 [00:03<00:01,  3.56chunk/s]  indic_hi.txt:  78%|███████▊  | 18/23 [00:03<00:01,  3.44chunk/s]  indic_hi.txt:  83%|████████▎ | 19/23 [00:03<00:01,  3.23chunk/s]  indic_hi.txt:  87%|████████▋ | 20/23 [00:04<00:00,  3.12chunk/s]  indic_hi.txt:  91%|█████████▏| 21/23 [00:04<00:00,  3.10chunk/s]  indic_hi.txt:  96%|█████████▌| 22/23 [00:05<00:00,  3.04chunk/s]  indic_hi.txt: 100%|██████████| 23/23 [00:05<00:00,  3.79chunk/s]                                                                    ✅ indic_hi.txt                         lines=111,506  tokenized=111,506  avg=  94.1tok  max= 6678  unk=0.000%
+  indic_kn.txt:   0%|          | 0/26 [00:00<?, ?chunk/s]  indic_kn.txt:  12%|█▏        | 3/26 [00:00<00:00, 25.96chunk/s]  indic_kn.txt:  23%|██▎       | 6/26 [00:00<00:00, 26.51chunk/s]  indic_kn.txt:  35%|███▍      | 9/26 [00:00<00:00, 26.59chunk/s]  indic_kn.txt:  46%|████▌     | 12/26 [00:00<00:01, 11.05chunk/s]  indic_kn.txt:  54%|█████▍    | 14/26 [00:01<00:01,  8.01chunk/s]  indic_kn.txt:  62%|██████▏   | 16/26 [00:01<00:01,  6.57chunk/s]  indic_kn.txt:  69%|██████▉   | 18/26 [00:02<00:01,  5.80chunk/s]  indic_kn.txt:  73%|███████▎  | 19/26 [00:02<00:01,  5.59chunk/s]  indic_kn.txt:  77%|███████▋  | 20/26 [00:02<00:01,  5.34chunk/s]  indic_kn.txt:  81%|████████  | 21/26 [00:02<00:00,  5.12chunk/s]  indic_kn.txt:  85%|████████▍ | 22/26 [00:03<00:00,  4.93chunk/s]  indic_kn.txt:  88%|████████▊ | 23/26 [00:03<00:00,  4.78chunk/s]  indic_kn.txt:  92%|█████████▏| 24/26 [00:03<00:00,  4.60chunk/s]  indic_kn.txt:  96%|█████████▌| 25/26 [00:03<00:00,  4.57chunk/s]  indic_kn.txt: 100%|██████████| 26/26 [00:03<00:00,  5.03chunk/s]                                                                    ✅ indic_kn.txt                         lines=128,032  tokenized=128,032  avg=  72.9tok  max=22967  unk=0.000%
+  indic_mixed.txt:   0%|          | 0/47 [00:00<?, ?chunk/s]  indic_mixed.txt:   4%|▍         | 2/47 [00:00<00:02, 15.53chunk/s]  indic_mixed.txt:   9%|▊         | 4/47 [00:00<00:02, 16.17chunk/s]  indic_mixed.txt:  15%|█▍        | 7/47 [00:00<00:02, 18.36chunk/s]  indic_mixed.txt:  19%|█▉        | 9/47 [00:00<00:03, 11.54chunk/s]  indic_mixed.txt:  23%|██▎       | 11/47 [00:00<00:03, 10.09chunk/s]  indic_mixed.txt:  28%|██▊       | 13/47 [00:01<00:03,  9.61chunk/s]  indic_mixed.txt:  32%|███▏      | 15/47 [00:01<00:03,  9.32chunk/s]  indic_mixed.txt:  36%|███▌      | 17/47 [00:01<00:03,  8.86chunk/s]  indic_mixed.txt:  38%|███▊      | 18/47 [00:01<00:03,  8.81chunk/s]  indic_mixed.txt:  40%|████      | 19/47 [00:01<00:03,  8.77chunk/s]  indic_mixed.txt:  43%|████▎     | 20/47 [00:01<00:03,  8.74chunk/s]  indic_mixed.txt:  45%|████▍     | 21/47 [00:02<00:02,  8.99chunk/s]  indic_mixed.txt:  47%|████▋     | 22/47 [00:02<00:02,  8.93chunk/s]  indic_mixed.txt:  49%|████▉     | 23/47 [00:02<00:02,  8.75chunk/s]  indic_mixed.txt:  51%|█████     | 24/47 [00:02<00:02,  8.70chunk/s]  indic_mixed.txt:  53%|█████▎    | 25/47 [00:02<00:02,  8.73chunk/s]  indic_mixed.txt:  57%|█████▋    | 27/47 [00:02<00:02,  9.42chunk/s]  indic_mixed.txt:  60%|█████▉    | 28/47 [00:02<00:02,  9.41chunk/s]  indic_mixed.txt:  62%|██████▏   | 29/47 [00:03<00:02,  7.77chunk/s]  indic_mixed.txt:  64%|██████▍   | 30/47 [00:03<00:02,  8.20chunk/s]  indic_mixed.txt:  68%|██████▊   | 32/47 [00:03<00:01,  8.99chunk/s]  indic_mixed.txt:  70%|███████   | 33/47 [00:03<00:01,  9.11chunk/s]  indic_mixed.txt:  72%|███████▏  | 34/47 [00:03<00:01,  9.23chunk/s]  indic_mixed.txt:  74%|███████▍  | 35/47 [00:03<00:01,  9.41chunk/s]  indic_mixed.txt:  79%|███████▊  | 37/47 [00:03<00:01,  9.77chunk/s]  indic_mixed.txt:  83%|████████▎ | 39/47 [00:04<00:00, 10.10chunk/s]  indic_mixed.txt:  87%|████████▋ | 41/47 [00:04<00:00,  9.34chunk/s]  indic_mixed.txt:  89%|████████▉ | 42/47 [00:04<00:00,  9.35chunk/s]  indic_mixed.txt:  94%|█████████▎| 44/47 [00:04<00:00,  9.64chunk/s]  indic_mixed.txt:  98%|█████████▊| 46/47 [00:04<00:00,  9.88chunk/s]                                                                       ✅ indic_mixed.txt                      lines=233,823  tokenized=233,823  avg=  40.1tok  max=  304  unk=0.000%
+  indic_ml.txt:   0%|          | 0/15 [00:00<?, ?chunk/s]  indic_ml.txt:   7%|▋         | 1/15 [00:00<00:02,  5.27chunk/s]  indic_ml.txt:  13%|█▎        | 2/15 [00:00<00:02,  5.14chunk/s]  indic_ml.txt:  20%|██        | 3/15 [00:00<00:03,  3.92chunk/s]  indic_ml.txt:  27%|██▋       | 4/15 [00:00<00:02,  4.34chunk/s]  indic_ml.txt:  33%|███▎      | 5/15 [00:01<00:02,  4.26chunk/s]  indic_ml.txt:  40%|████      | 6/15 [00:01<00:02,  4.32chunk/s]  indic_ml.txt:  47%|████▋     | 7/15 [00:01<00:01,  4.28chunk/s]  indic_ml.txt:  53%|█████▎    | 8/15 [00:01<00:01,  4.47chunk/s]  indic_ml.txt:  60%|██████    | 9/15 [00:02<00:01,  4.30chunk/s]  indic_ml.txt:  67%|██████▋   | 10/15 [00:02<00:01,  4.65chunk/s]  indic_ml.txt:  73%|███████▎  | 11/15 [00:02<00:00,  4.54chunk/s]  indic_ml.txt:  80%|████████  | 12/15 [00:02<00:00,  4.34chunk/s]  indic_ml.txt:  87%|████████▋ | 13/15 [00:02<00:00,  4.78chunk/s]  indic_ml.txt:  93%|█████████▎| 14/15 [00:03<00:00,  4.95chunk/s]                                                                    ✅ indic_ml.txt                         lines=70,856  tokenized=70,856  avg= 113.5tok  max=12561  unk=0.000%
+  indic_mr.txt:   0%|          | 0/22 [00:00<?, ?chunk/s]  indic_mr.txt:  14%|█▎        | 3/22 [00:00<00:00, 24.26chunk/s]  indic_mr.txt:  27%|██▋       | 6/22 [00:00<00:00, 23.78chunk/s]  indic_mr.txt:  41%|████      | 9/22 [00:00<00:00, 18.32chunk/s]  indic_mr.txt:  50%|█████     | 11/22 [00:00<00:01, 10.82chunk/s]  indic_mr.txt:  59%|█████▉    | 13/22 [00:01<00:01,  6.10chunk/s]  indic_mr.txt:  68%|██████▊   | 15/22 [00:02<00:01,  4.70chunk/s]  indic_mr.txt:  73%|███████▎  | 16/22 [00:02<00:01,  4.24chunk/s]  indic_mr.txt:  77%|███████▋  | 17/22 [00:02<00:01,  3.91chunk/s]  indic_mr.txt:  82%|████████▏ | 18/22 [00:03<00:01,  3.75chunk/s]  indic_mr.txt:  86%|████████▋ | 19/22 [00:03<00:00,  3.52chunk/s]  indic_mr.txt:  91%|█████████ | 20/22 [00:03<00:00,  3.43chunk/s]  indic_mr.txt:  95%|█████████▌| 21/22 [00:04<00:00,  3.43chunk/s]  indic_mr.txt: 100%|██████████| 22/22 [00:04<00:00,  3.48chunk/s]                                                                    ✅ indic_mr.txt                         lines=109,184  tokenized=109,184  avg=  86.9tok  max=14268  unk=0.000%
+  indic_or.txt:   0%|          | 0/14 [00:00<?, ?chunk/s]  indic_or.txt:   7%|▋         | 1/14 [00:00<00:03,  3.43chunk/s]  indic_or.txt:  14%|█▍        | 2/14 [00:00<00:03,  3.24chunk/s]  indic_or.txt:  21%|██▏       | 3/14 [00:00<00:03,  3.32chunk/s]  indic_or.txt:  29%|██▊       | 4/14 [00:01<00:02,  3.33chunk/s]  indic_or.txt:  36%|███▌      | 5/14 [00:01<00:02,  3.32chunk/s]  indic_or.txt:  43%|████▎     | 6/14 [00:01<00:02,  3.42chunk/s]  indic_or.txt:  50%|█████     | 7/14 [00:02<00:02,  3.45chunk/s]  indic_or.txt:  57%|█████▋    | 8/14 [00:02<00:01,  3.12chunk/s]  indic_or.txt:  64%|██████▍   | 9/14 [00:02<00:01,  3.12chunk/s]  indic_or.txt:  71%|███████▏  | 10/14 [00:03<00:01,  3.17chunk/s]  indic_or.txt:  79%|███████▊  | 11/14 [00:03<00:00,  3.16chunk/s]  indic_or.txt:  86%|████████▌ | 12/14 [00:03<00:00,  3.18chunk/s]  indic_or.txt:  93%|█████████▎| 13/14 [00:04<00:00,  3.21chunk/s]  indic_or.txt: 100%|██████████| 14/14 [00:04<00:00,  3.27chunk/s]                                                                    ✅ indic_or.txt                         lines=69,519  tokenized=69,519  avg= 141.6tok  max=40801  unk=0.000%
+  indic_pa.txt:   0%|          | 0/24 [00:00<?, ?chunk/s]  indic_pa.txt:   8%|▊         | 2/24 [00:00<00:01, 19.93chunk/s]  indic_pa.txt:  21%|██        | 5/24 [00:00<00:00, 21.41chunk/s]  indic_pa.txt:  33%|███▎      | 8/24 [00:00<00:00, 22.02chunk/s]  indic_pa.txt:  46%|████▌     | 11/24 [00:00<00:01, 11.91chunk/s]  indic_pa.txt:  54%|█████▍    | 13/24 [00:01<00:01,  5.89chunk/s]  indic_pa.txt:  62%|██████▎   | 15/24 [00:02<00:02,  4.07chunk/s]  indic_pa.txt:  67%|██████▋   | 16/24 [00:02<00:02,  3.72chunk/s]  indic_pa.txt:  71%|███████   | 17/24 [00:03<00:01,  3.50chunk/s]  indic_pa.txt:  75%|███████▌  | 18/24 [00:03<00:01,  3.20chunk/s]  indic_pa.txt:  79%|███████▉  | 19/24 [00:03<00:01,  3.02chunk/s]  indic_pa.txt:  83%|████████▎ | 20/24 [00:04<00:01,  3.10chunk/s]  indic_pa.txt:  88%|████████▊ | 21/24 [00:04<00:01,  2.96chunk/s]  indic_pa.txt:  92%|█████████▏| 22/24 [00:05<00:00,  2.86chunk/s]  indic_pa.txt:  96%|█████████▌| 23/24 [00:05<00:00,  2.76chunk/s]  indic_pa.txt: 100%|██████████| 24/24 [00:05<00:00,  2.93chunk/s]                                                                    ✅ indic_pa.txt                         lines=119,463  tokenized=119,463  avg=  98.0tok  max=20446  unk=0.000%
+  indic_ta.txt:   0%|          | 0/17 [00:00<?, ?chunk/s]  indic_ta.txt:   6%|▌         | 1/17 [00:00<00:03,  4.70chunk/s]  indic_ta.txt:  12%|█▏        | 2/17 [00:00<00:02,  5.04chunk/s]  indic_ta.txt:  18%|█▊        | 3/17 [00:00<00:02,  5.11chunk/s]  indic_ta.txt:  24%|██▎       | 4/17 [00:00<00:02,  5.07chunk/s]  indic_ta.txt:  29%|██▉       | 5/17 [00:00<00:02,  5.01chunk/s]  indic_ta.txt:  35%|███▌      | 6/17 [00:01<00:02,  4.90chunk/s]  indic_ta.txt:  41%|████      | 7/17 [00:01<00:02,  4.98chunk/s]  indic_ta.txt:  47%|████▋     | 8/17 [00:01<00:01,  5.00chunk/s]  indic_ta.txt:  53%|█████▎    | 9/17 [00:01<00:01,  5.01chunk/s]  indic_ta.txt:  59%|█████▉    | 10/17 [00:02<00:01,  4.99chunk/s]  indic_ta.txt:  65%|██████▍   | 11/17 [00:02<00:01,  4.96chunk/s]  indic_ta.txt:  71%|███████   | 12/17 [00:02<00:01,  4.39chunk/s]  indic_ta.txt:  76%|███████▋  | 13/17 [00:02<00:00,  4.64chunk/s]  indic_ta.txt:  82%|████████▏ | 14/17 [00:02<00:00,  4.81chunk/s]  indic_ta.txt:  88%|████████▊ | 15/17 [00:03<00:00,  4.83chunk/s]  indic_ta.txt:  94%|█████████▍| 16/17 [00:03<00:00,  4.62chunk/s]                                                                    ✅ indic_ta.txt                         lines=81,832  tokenized=81,832  avg= 103.2tok  max=54257  unk=0.000%
+  indic_te.txt:   0%|          | 0/18 [00:00<?, ?chunk/s]  indic_te.txt:  17%|█▋        | 3/18 [00:00<00:00, 24.10chunk/s]  indic_te.txt:  33%|███▎      | 6/18 [00:00<00:01,  8.79chunk/s]  indic_te.txt:  44%|████▍     | 8/18 [00:01<00:01,  5.98chunk/s]  indic_te.txt:  50%|█████     | 9/18 [00:01<00:01,  5.27chunk/s]  indic_te.txt:  56%|█████▌    | 10/18 [00:01<00:01,  4.96chunk/s]  indic_te.txt:  61%|██████    | 11/18 [00:01<00:01,  4.62chunk/s]  indic_te.txt:  67%|██████▋   | 12/18 [00:02<00:01,  4.41chunk/s]  indic_te.txt:  72%|███████▏  | 13/18 [00:02<00:01,  4.30chunk/s]  indic_te.txt:  78%|███████▊  | 14/18 [00:02<00:00,  4.11chunk/s]  indic_te.txt:  83%|████████▎ | 15/18 [00:02<00:00,  4.00chunk/s]  indic_te.txt:  89%|████████▉ | 16/18 [00:03<00:00,  3.67chunk/s]  indic_te.txt:  94%|█████████▍| 17/18 [00:03<00:00,  3.76chunk/s]  indic_te.txt: 100%|██████████| 18/18 [00:03<00:00,  3.89chunk/s]                                                                    ✅ indic_te.txt                         lines=89,400  tokenized=89,400  avg= 103.7tok  max=23632  unk=0.000%
+
+========================================================================
+  PHASE 2  Aggregating all datasets → OVERALL stats
+========================================================================
+  Datasets with text : 21
+  Total tokenized docs: 1,996,464
+  Total tokens counted: 1,952,474,013
+  Unique tokens seen  : 44,197 / 131,072 (33.7%)
+  Unused tokens       : 86,875 (66.3%)
+  Rare tokens (< 5)   : 300
+  Total UNK tokens    : 0
+  ⚠️   Unused token ratio 66.3% > 20% — vocab may be overextended or data too narrow
+
+========================================================================
+  TEST 1: Special Token Integrity
+========================================================================
+  ✅  '<|begin_of_text|>'                      → id=0
+  ✅  '<|end_of_text|>'                        → id=1
+  ✅  '<|pad|>'                                → id=2
+
+  ✅  '<|system|>'                             → id=10
+  ✅  '<|user|>'                               → id=11
+  ✅  '<|assistant|>'                          → id=12
+  ❌  '<|tool|>'                               → id=3
+  ❌  '<|im_start|>'                           → id=3
+  ❌  '<|im_end|>'                             → id=3
+  ❌  '<|end_turn|>'                           → id=3
+
+  ✅  Problematic '<|startoftext|>' is absent
+  ✅  Problematic '<|return|>' is absent
+  ✅  Problematic '<AGENT>' is absent
+  ✅  Problematic '|AGENT|' is absent
+  ✅  No duplicate token IDs
+
+========================================================================
+  TEST 2: Encode / Decode Round-trip
+========================================================================
+  ✅  [English        ] (  12 tok) 'Hello, world! How are you?'
+  ✅  [Numbers        ] (  17 tok) '3.14159 × 2 = 6.28318'
+  ✅  [Code           ] (  24 tok) 'def foo(x: int) -> str:\n    return str(x)'
+  ✅  [Hindi          ] (  14 tok) 'नमस्ते दुनिया, आप कैसे हैं?'
+  ✅  [Telugu         ] (  15 tok) 'నమస్కారం, మీరు ఎలా ఉన్నారు?'
+  ✅  [Marathi        ] (  13 tok) 'नमस्कार, तुम्ही कसे आहात?'
+  ✅  [Punjabi        ] (  18 tok) 'ਸਤ ਸ੍ਰੀ ਅਕਾਲ, ਤੁਸੀਂ ਕਿਵੇਂ ਹੋ?'
+  ✅  [Assamese       ] (  13 tok) 'নমস্কাৰ, আপোনাৰ কেনেকুৱা আছে?'
+  ✅  [Bengali        ] (  13 tok) 'হ্যালো, আপনি কেমন আছেন?'
+  ✅  [Tamil          ] (  13 tok) 'வணக்கம், நீங்கள் எப்படி இருக்கிறீர்கள்?'
+  ✅  [Kannada        ] (  12 tok) 'ನಮಸ್ಕಾರ, ನೀವು ಹೇಗಿದ್ದೀರಿ?'
+  ✅  [Multiline      ] (  11 tok) 'Line1\nLine2\tTabbed\nLine3'
+  ✅  [Emoji          ] (  19 tok) 'The quick brown 🦊 jumps over 🐕'
+  ✅  [Long repeat    ] ( 400 tok) 'word word word word word word word word word '
+  ✅  [JSON           ] (  27 tok) '{"key": "value", "num": 42, "arr": [1,2,3]}'
+  ✅  [Special tokens ] (  24 tok) '<|system|>You are helpful.<|end_turn|><|user|'
+  ✅  [Arabic         ] (  36 tok) 'هذه جملة اختبار مكتوبة باللغة العربية.'
+  ✅  [Chinese        ] (  34 tok) '这是一个用中文写的测试句子。'
+  ✅  [Japanese       ] (  34 tok) 'これは日本語で書かれたテスト文です。'
+  ✅  [Russian        ] (  55 tok) 'Это тестовое предложение, написанное на русск'
+  ✅  [CRLF           ] (  10 tok) 'line1\r\nline2\r\nline3'
+  ✅  [Math           ] (  23 tok) '∫₀^∞ e^{-x²} dx = √π/2'
+  ✅  [Mixed script   ] (  23 tok) 'The model scored 95.3% on बेंचमार्क tests: ✓'
+
+========================================================================
+  TEST 3: Special Token Single-Token Check (all 356 added tokens)
+========================================================================
+  ✅  All 835 special/added tokens encode as exactly 1 token
+
+========================================================================
+  TEST 4: Ghost Tag / Format Drift — per dataset
+========================================================================
+  ✅  [golden_samples] No ghost tags
+  ⚠️   [raw_shard] '<|endoftext|>': 3 hits
+  ⚠️   [raw_shard] '[SYSTEM]': 2 hits
+  ⚠️   [raw_shard] '[USER]': 6 hits
+  ✅  [raw_manifest] No ghost tags
+  ✅  [manifest] No ghost tags
+  ✅  [sft_group1_assamese] No ghost tags
+  ✅  [sft_group1_hindi] No ghost tags
+  ✅  [sft_group1_marathi] No ghost tags
+  ✅  [sft_group1_punjabi] No ghost tags
+  ✅  [sft_group1_telugu] No ghost tags
+  ✅  [sft_group2] No ghost tags
+  ✅  [sft_group3] No ghost tags
+  ✅  [sft_indic_as] No ghost tags
+  ✅  [sft_indic_bn] No ghost tags
+  ✅  [sft_indic_gu] No ghost tags
+  ✅  [sft_indic_hi] No ghost tags
+  ✅  [sft_indic_kn] No ghost tags
+  ✅  [sft_indic_mixed] No ghost tags
+  ✅  [sft_indic_ml] No ghost tags
+  ✅  [sft_indic_mr] No ghost tags
+  ✅  [sft_indic_or] No ghost tags
+  ✅  [sft_indic_pa] No ghost tags
+  ✅  [sft_indic_ta] No ghost tags
+  ✅  [sft_indic_te] No ghost tags
+
+========================================================================
+  TEST 5: Vocabulary Utilisation
+========================================================================
+  ⚠️  golden_samples                       unique= 8,636  unused=122,436 ( 93.4%)  UNK=0 (0.000%)
+  ⚠️  raw_shard                            unique=41,960  unused=89,112 ( 68.0%)  UNK=0 (0.000%)
+  ⚠️  sft_group1_assamese                  unique= 2,174  unused=128,898 ( 98.3%)  UNK=0 (0.000%)
+  ⚠️  sft_group1_hindi                     unique= 1,266  unused=129,806 ( 99.0%)  UNK=0 (0.000%)
+  ⚠️  sft_group1_marathi                   unique= 1,648  unused=129,424 ( 98.7%)  UNK=0 (0.000%)
+  ⚠️  sft_group1_punjabi                   unique=   661  unused=130,411 ( 99.5%)  UNK=0 (0.000%)
+  ⚠️  sft_group1_telugu                    unique= 1,693  unused=129,379 ( 98.7%)  UNK=0 (0.000%)
+  ⚠️  sft_group2                           unique=   317  unused=130,755 ( 99.8%)  UNK=0 (0.000%)
+  ⚠️  sft_group3                           unique= 1,237  unused=129,835 ( 99.1%)  UNK=0 (0.000%)
+  ⚠️  sft_indic_as                         unique=15,004  unused=116,068 ( 88.6%)  UNK=0 (0.000%)
+  ⚠️  sft_indic_bn                         unique=11,486  unused=119,586 ( 91.2%)  UNK=0 (0.000%)
+  ⚠️  sft_indic_gu                         unique=11,580  unused=119,492 ( 91.2%)  UNK=0 (0.000%)
+  ⚠️  sft_indic_hi                         unique=10,815  unused=120,257 ( 91.7%)  UNK=0 (0.000%)
+  ⚠️  sft_indic_kn                         unique=11,347  unused=119,725 ( 91.3%)  UNK=0 (0.000%)
+  ⚠️  sft_indic_mixed                      unique= 8,961  unused=122,111 ( 93.2%)  UNK=0 (0.000%)
+  ⚠️  sft_indic_ml                         unique=10,000  unused=121,072 ( 92.4%)  UNK=0 (0.000%)
+  ⚠️  sft_indic_mr                         unique=10,790  unused=120,282 ( 91.8%)  UNK=0 (0.000%)
+  ⚠️  sft_indic_or                         unique= 9,367  unused=121,705 ( 92.9%)  UNK=0 (0.000%)
+  ⚠️  sft_indic_pa                         unique=10,904  unused=120,168 ( 91.7%)  UNK=0 (0.000%)
+  ⚠️  sft_indic_ta                         unique=11,103  unused=119,969 ( 91.5%)  UNK=0 (0.000%)
+  ⚠️  sft_indic_te                         unique=10,498  unused=120,574 ( 92.0%)  UNK=0 (0.000%)
+
+  OVERALL  unique=44,197  unused=86,875 (66.3%)  rare=300
+
+========================================================================
+  TEST 6: Token Length Distribution — per dataset + overall
+========================================================================
+  golden_samples                       n=   256  mean= 986.0  median= 585.0  p95=  2526  max= 35685
+  raw_shard                            n=630,140  mean=2845.5  median=1969.0  p95=  7629  max=436697
+Token indices sequence length is longer than the specified maximum sequence length for this model (2699145 > 131072). Running this sequence through the model will result in indexing errors
+  sft_group1_assamese                  n=12,294  mean= 433.2  median= 433.0  p95=   469  max=   515
+  sft_group1_hindi                     n=14,323  mean= 393.9  median= 394.0  p95=   425  max=   478
+  sft_group1_marathi                   n=16,101  mean= 358.2  median= 357.0  p95=   392  max=   463
+  sft_group1_punjabi                   n=16,852  mean= 421.3  median= 421.0  p95=   446  max=   750
+  sft_group1_telugu                    n=17,716  mean= 337.4  median= 336.0  p95=   369  max=   434
+  sft_group2                           n= 9,710  mean=1035.5  median=1037.0  p95=  1183  max=  1540
+  sft_group3                           n= 2,512  mean= 966.2  median= 944.5  p95=  1110  max=  1158
+  sft_indic_as                         n=112,172  mean=  91.8  median=  34.0  p95=   348  max= 71161
+  sft_indic_bn                         n=77,298  mean= 124.5  median=  87.0  p95=   370  max= 16261
+  sft_indic_gu                         n=73,475  mean= 149.1  median= 108.0  p95=   407  max= 12474
+  sft_indic_hi                         n=111,506  mean=  94.1  median=  42.0  p95=   299  max=  6678
+  sft_indic_kn                         n=128,032  mean=  72.9  median=  31.0  p95=   231  max= 22967
+  sft_indic_mixed                      n=233,823  mean=  40.1  median=  37.0  p95=    77  max=   304
+  sft_indic_ml                         n=70,856  mean= 113.5  median=  92.0  p95=   267  max= 12561
+  sft_indic_mr                         n=109,184  mean=  86.9  median=  31.0  p95=   288  max= 14268
+  sft_indic_or                         n=69,519  mean= 141.6  median= 102.0  p95=   416  max= 40801
+  sft_indic_pa                         n=119,463  mean=  98.0  median=  32.0  p95=   348  max= 20446
+  sft_indic_ta                         n=81,832  mean= 103.2  median=  74.0  p95=   255  max= 54257
+  sft_indic_te                         n=89,400  mean= 103.7  median=  50.0  p95=   318  max= 23632
+
+  OVERALL                              n=1,996,464  mean= 978.0  median= 134.0  p95=  3877  max=436697
+
+========================================================================
+  TEST 7: SFT Loss Masking Simulation
+========================================================================
+  ✅  [structured                    ] n_tok=  45  unmasked=   8  pad_ok=True
+  ✅  [multi_turn                    ] n_tok=  60  unmasked=  44  pad_ok=True
+  ✅  [code                          ] n_tok=  58  unmasked=  24  pad_ok=True
+  ✅  [tool_use                      ] n_tok=  83  unmasked=  67  pad_ok=True
+  ❌  [fim                           ] NO unmasked tokens — masking logic misses assistant content
+  ✅  [golden_math_reasoning         ] n_tok= 792  unmasked= 627  pad_ok=True
+  ✅  [golden_math_reasoning         ] n_tok= 726  unmasked= 479  pad_ok=True
+  ✅  [golden_math_reasoning         ] n_tok= 797  unmasked= 449  pad_ok=True
+
+========================================================================
+  TEST 8: Sequence Length Checklist (1K → 256K)
+========================================================================
+  Collecting long documents from raw_shard for length tests …
+  Pre-tokenizing 6,000,000 chars for length tests …
+  Got 2,699,145 tokens
+  ✅ Length   1,024 → encode ✓  decode ✓  re-encode stable=True
+  ✅ Length   2,048 → encode ✓  decode ✓  re-encode stable=True
+  ✅ Length   4,096 → encode ✓  decode ✓  re-encode stable=True
+  ✅ Length   8,192 → encode ✓  decode ✓  re-encode stable=True
+  ✅ Length  16,384 → encode ✓  decode ✓  re-encode stable=True
+  ✅ Length  32,768 → encode ✓  decode ✓  re-encode stable=True
+  ✅ Length  65,536 → encode ✓  decode ✓  re-encode stable=True
+  ✅ Length 131,072 → encode ✓  decode ✓  re-encode stable=True
+  ✅ Length 262,144 → encode ✓  decode ✓  re-encode stable=True
+
+========================================================================
+  TEST 9: Multilingual / Script Coverage
+========================================================================
+  ✅ Hindi       :   25 tok  rt=OK  UNK=0 (0.0%)
+  ✅ Telugu      :   13 tok  rt=OK  UNK=0 (0.0%)
+  ✅ Marathi     :   19 tok  rt=OK  UNK=0 (0.0%)
+  ✅ Punjabi     :   22 tok  rt=OK  UNK=0 (0.0%)
+  ✅ Assamese    :   17 tok  rt=OK  UNK=0 (0.0%)
+  ✅ Bengali     :   17 tok  rt=OK  UNK=0 (0.0%)
+  ✅ Tamil       :   18 tok  rt=OK  UNK=0 (0.0%)
+  ✅ Kannada     :   18 tok  rt=OK  UNK=0 (0.0%)
+  ✅ Gujarati    :   20 tok  rt=OK  UNK=0 (0.0%)
+  ✅ Odia        :   20 tok  rt=OK  UNK=0 (0.0%)
+  ✅ Malayalam   :   18 tok  rt=OK  UNK=0 (0.0%)
+  ✅ Arabic      :   36 tok  rt=OK  UNK=0 (0.0%)
+  ✅ Chinese     :   34 tok  rt=OK  UNK=0 (0.0%)
+  ✅ Japanese    :   34 tok  rt=OK  UNK=0 (0.0%)
+  ✅ Russian     :   55 tok  rt=OK  UNK=0 (0.0%)
+  ✅ French      :   23 tok  rt=OK  UNK=0 (0.0%)
+  ✅ Spanish     :   27 tok  rt=OK  UNK=0 (0.0%)
+  ✅ German      :   17 tok  rt=OK  UNK=0 (0.0%)
+  ✅ Code (Py)   :   30 tok  rt=OK  UNK=0 (0.0%)
+  ✅ Math        :   23 tok  rt=OK  UNK=0 (0.0%)
+  ✅ Mixed       :   28 tok  rt=OK  UNK=0 (0.0%)
+
+========================================================================
+  TEST 10: Semantic Duplicate Token Check
+========================================================================
+  ⚠️   Semantic duplicate decoded='\x00'  ids=[256, 76217]  raws=['<0x00>', '\x00']
+  ⚠️   Semantic duplicate decoded='\x01'  ids=[257, 76218]  raws=['<0x01>', '\x01']
+  ⚠️   Semantic duplicate decoded='\x02'  ids=[258, 76219]  raws=['<0x02>', '\x02']
+  ⚠️   Semantic duplicate decoded='\x03'  ids=[259, 76220]  raws=['<0x03>', '\x03']
+  ⚠️   Semantic duplicate decoded='\x04'  ids=[260, 76221]  raws=['<0x04>', '\x04']
+  ⚠️   Semantic duplicate decoded='\x05'  ids=[261, 76222]  raws=['<0x05>', '\x05']
+  ⚠️   Semantic duplicate decoded='\x06'  ids=[262, 76223]  raws=['<0x06>', '\x06']
+  ⚠️   Semantic duplicate decoded='\x07'  ids=[263, 76224]  raws=['<0x07>', '\x07']
+  ⚠️   Semantic duplicate decoded='\x08'  ids=[264, 76225]  raws=['<0x08>', '\x08']
+  ⚠️   Semantic duplicate decoded='\t'  ids=[265, 76226]  raws=['<0x09>', '\t']
+  ⚠️   Semantic duplicate decoded='\n'  ids=[266, 76227]  raws=['<0x0A>', '\n']
+  ⚠️   Semantic duplicate decoded='\x0b'  ids=[267, 76228]  raws=['<0x0B>', '\x0b']
+  ⚠️   Semantic duplicate decoded='\x0c'  ids=[268, 76229]  raws=['<0x0C>', '\x0c']
+  ⚠️   Semantic duplicate decoded='\r'  ids=[269, 76230]  raws=['<0x0D>', '\r']
+  ⚠️   Semantic duplicate decoded='\x0e'  ids=[270, 76231]  raws=['<0x0E>', '\x0e']
+  ⚠️   Semantic duplicate decoded='\x0f'  ids=[271, 76232]  raws=['<0x0F>', '\x0f']
+  ⚠️   Semantic duplicate decoded='\x10'  ids=[272, 76233]  raws=['<0x10>', '\x10']
+  ⚠️   Semantic duplicate decoded='\x11'  ids=[273, 76234]  raws=['<0x11>', '\x11']
+  ⚠️   Semantic duplicate decoded='\x12'  ids=[274, 76235]  raws=['<0x12>', '\x12']
+  ⚠️   Semantic duplicate decoded='\x13'  ids=[275, 76236]  raws=['<0x13>', '\x13']
+  ⚠️   Semantic duplicate decoded='\x14'  ids=[276, 76237]  raws=['<0x14>', '\x14']
+  ⚠️   Semantic duplicate decoded='\x15'  ids=[277, 76238]  raws=['<0x15>', '\x15']
+  ⚠️   Semantic duplicate decoded='\x16'  ids=[278, 76239]  raws=['<0x16>', '\x16']
+  ⚠️   Semantic duplicate decoded='\x17'  ids=[279, 76240]  raws=['<0x17>', '\x17']
+  ⚠️   Semantic duplicate decoded='\x18'  ids=[280, 76241]  raws=['<0x18>', '\x18']
+  ⚠️   Semantic duplicate decoded='\x19'  ids=[281, 76242]  raws=['<0x19>', '\x19']
+  ⚠️   Semantic duplicate decoded='\x1a'  ids=[282, 76243]  raws=['<0x1A>', '\x1a']
+  ⚠️   Semantic duplicate decoded='\x1b'  ids=[283, 76244]  raws=['<0x1B>', '\x1b']
+  ⚠️   Semantic duplicate decoded='\x1c'  ids=[284, 76245]  raws=['<0x1C>', '\x1c']
+  ⚠️   Semantic duplicate decoded='\x1d'  ids=[285, 76246]  raws=['<0x1D>', '\x1d']
+  ⚠️   Semantic duplicate decoded='\x1e'  ids=[286, 76247]  raws=['<0x1E>', '\x1e']
+  ⚠️   Semantic duplicate decoded='\x1f'  ids=[287, 76248]  raws=['<0x1F>', '\x1f']
+  ⚠️   Semantic duplicate decoded=' '  ids=[288, 76249]  raws=['<0x20>', ' ']
+  ⚠️   Semantic duplicate decoded='!'  ids=[289, 531]  raws=['<0x21>', '!']
+  ⚠️   Semantic duplicate decoded='"'  ids=[290, 2313]  raws=['<0x22>', '"']
+  ⚠️   Semantic duplicate decoded='#'  ids=[291, 2314]  raws=['<0x23>', '#']
+  ⚠️   Semantic duplicate decoded='$'  ids=[292, 2315]  raws=['<0x24>', '$']
+  ⚠️   Semantic duplicate decoded='%'  ids=[293, 530]  raws=['<0x25>', '%']
+  ⚠️   Semantic duplicate decoded='&'  ids=[294, 2316]  raws=['<0x26>', '&']
+  ⚠️   Semantic duplicate decoded="'"  ids=[295, 2317]  raws=['<0x27>', "'"]
+  ⚠️   Semantic duplicate decoded='('  ids=[296, 2318]  raws=['<0x28>', '(']
+  ⚠️   Semantic duplicate decoded=')'  ids=[297, 2319]  raws=['<0x29>', ')']
+  ⚠️   Semantic duplicate decoded='*'  ids=[298, 524]  raws=['<0x2A>', '*']
+  ⚠️   Semantic duplicate decoded='+'  ids=[299, 522]  raws=['<0x2B>', '+']
+  ⚠️   Semantic duplicate decoded=','  ids=[300, 2320]  raws=['<0x2C>', ',']
+  ⚠️   Semantic duplicate decoded='-'  ids=[301, 523]  raws=['<0x2D>', '-']
+  ⚠️   Semantic duplicate decoded='.'  ids=[302, 2321]  raws=['<0x2E>', '.']
+  ⚠️   Semantic duplicate decoded='/'  ids=[303, 525]  raws=['<0x2F>', '/']
+  ⚠️   Semantic duplicate decoded='0'  ids=[304, 512]  raws=['<0x30>', '0']
+  ⚠️   Semantic duplicate decoded='1'  ids=[305, 513]  raws=['<0x31>', '1']
+  ⚠️   Semantic duplicate decoded='2'  ids=[306, 514]  raws=['<0x32>', '2']
+  ⚠️   Semantic duplicate decoded='3'  ids=[307, 515]  raws=['<0x33>', '3']
+  ⚠️   Semantic duplicate decoded='4'  ids=[308, 516]  raws=['<0x34>', '4']
+  ⚠️   Semantic duplicate decoded='5'  ids=[309, 517]  raws=['<0x35>', '5']
+  ⚠️   Semantic duplicate decoded='6'  ids=[310, 518]  raws=['<0x36>', '6']
+  ⚠️   Semantic duplicate decoded='7'  ids=[311, 519]  raws=['<0x37>', '7']
+  ⚠️   Semantic duplicate decoded='8'  ids=[312, 520]  raws=['<0x38>', '8']
+  ⚠️   Semantic duplicate decoded='9'  ids=[313, 521]  raws=['<0x39>', '9']
+  ⚠️   Semantic duplicate decoded=':'  ids=[314, 2322]  raws=['<0x3A>', ':']
+  ⚠️   Semantic duplicate decoded=';'  ids=[315, 2323]  raws=['<0x3B>', ';']
+  ⚠️   Semantic duplicate decoded='<'  ids=[316, 527]  raws=['<0x3C>', '<']
+  ⚠️   Semantic duplicate decoded='='  ids=[317, 526]  raws=['<0x3D>', '=']
+  ⚠️   Semantic duplicate decoded='>'  ids=[318, 528]  raws=['<0x3E>', '>']
+  ⚠️   Semantic duplicate decoded='?'  ids=[319, 2324]  raws=['<0x3F>', '?']
+  ⚠️   Semantic duplicate decoded='@'  ids=[320, 2325]  raws=['<0x40>', '@']
+  ⚠️   Semantic duplicate decoded='A'  ids=[321, 2326]  raws=['<0x41>', 'A']
+  ⚠️   Semantic duplicate decoded='B'  ids=[322, 2327]  raws=['<0x42>', 'B']
+  ⚠️   Semantic duplicate decoded='C'  ids=[323, 2328]  raws=['<0x43>', 'C']
+  ⚠️   Semantic duplicate decoded='D'  ids=[324, 2329]  raws=['<0x44>', 'D']
+  ⚠️   Semantic duplicate decoded='E'  ids=[325, 2330]  raws=['<0x45>', 'E']
+  ⚠️   Semantic duplicate decoded='F'  ids=[326, 2331]  raws=['<0x46>', 'F']
+  ⚠️   Semantic duplicate decoded='G'  ids=[327, 2332]  raws=['<0x47>', 'G']
+  ⚠️   Semantic duplicate decoded='H'  ids=[328, 2333]  raws=['<0x48>', 'H']
+  ⚠️   Semantic duplicate decoded='I'  ids=[329, 2334]  raws=['<0x49>', 'I']
+  ⚠️   Semantic duplicate decoded='J'  ids=[330, 2335]  raws=['<0x4A>', 'J']
+  ⚠️   Semantic duplicate decoded='K'  ids=[331, 2336]  raws=['<0x4B>', 'K']
+  ⚠️   Semantic duplicate decoded='L'  ids=[332, 2337]  raws=['<0x4C>', 'L']
+  ⚠️   Semantic duplicate decoded='M'  ids=[333, 2338]  raws=['<0x4D>', 'M']
+  ⚠️   Semantic duplicate decoded='N'  ids=[334, 2339]  raws=['<0x4E>', 'N']
+  ⚠️   Semantic duplicate decoded='O'  ids=[335, 2340]  raws=['<0x4F>', 'O']
+  ⚠️   Semantic duplicate decoded='P'  ids=[336, 2341]  raws=['<0x50>', 'P']
+  ⚠️   Semantic duplicate decoded='Q'  ids=[337, 2342]  raws=['<0x51>', 'Q']
+  ⚠️   Semantic duplicate decoded='R'  ids=[338, 2343]  raws=['<0x52>', 'R']
+  ⚠️   Semantic duplicate decoded='S'  ids=[339, 2344]  raws=['<0x53>', 'S']
+  ⚠️   Semantic duplicate decoded='T'  ids=[340, 2345]  raws=['<0x54>', 'T']
+  ⚠️   Semantic duplicate decoded='U'  ids=[341, 2346]  raws=['<0x55>', 'U']
+  ⚠️   Semantic duplicate decoded='V'  ids=[342, 2347]  raws=['<0x56>', 'V']
+  ⚠️   Semantic duplicate decoded='W'  ids=[343, 2348]  raws=['<0x57>', 'W']
+  ⚠️   Semantic duplicate decoded='X'  ids=[344, 2349]  raws=['<0x58>', 'X']
+  ⚠️   Semantic duplicate decoded='Y'  ids=[345, 2350]  raws=['<0x59>', 'Y']
+  ⚠️   Semantic duplicate decoded='Z'  ids=[346, 2351]  raws=['<0x5A>', 'Z']
+  ⚠️   Semantic duplicate decoded='['  ids=[347, 2352]  raws=['<0x5B>', '[']
+  ⚠️   Semantic duplicate decoded='\\'  ids=[348, 2353]  raws=['<0x5C>', '\\']
+  ⚠️   Semantic duplicate decoded=']'  ids=[349, 2354]  raws=['<0x5D>', ']']
+  ⚠️   Semantic duplicate decoded='^'  ids=[350, 529]  raws=['<0x5E>', '^']
+  ⚠️   Semantic duplicate decoded='_'  ids=[351, 2355]  raws=['<0x5F>', '_']
+  ⚠️   Semantic duplicate decoded='`'  ids=[352, 2356]  raws=['<0x60>', '`']
+  ⚠️   Semantic duplicate decoded='a'  ids=[353, 2357]  raws=['<0x61>', 'a']
+  ⚠️   Semantic duplicate decoded='b'  ids=[354, 2358]  raws=['<0x62>', 'b']
+  ⚠️   Semantic duplicate decoded='c'  ids=[355, 2359]  raws=['<0x63>', 'c']
+  ⚠️   Semantic duplicate decoded='d'  ids=[356, 2360]  raws=['<0x64>', 'd']
+  ⚠️   Semantic duplicate decoded='e'  ids=[357, 2361]  raws=['<0x65>', 'e']
+  ⚠️   Semantic duplicate decoded='f'  ids=[358, 2362]  raws=['<0x66>', 'f']
+  ⚠️   Semantic duplicate decoded='g'  ids=[359, 2363]  raws=['<0x67>', 'g']
+  ⚠️   Semantic duplicate decoded='h'  ids=[360, 2364]  raws=['<0x68>', 'h']
+  ⚠️   Semantic duplicate decoded='i'  ids=[361, 2365]  raws=['<0x69>', 'i']
+  ⚠️   Semantic duplicate decoded='j'  ids=[362, 2366]  raws=['<0x6A>', 'j']
+  ⚠️   Semantic duplicate decoded='k'  ids=[363, 2367]  raws=['<0x6B>', 'k']
+  ⚠️   Semantic duplicate decoded='l'  ids=[364, 2368]  raws=['<0x6C>', 'l']
+  ⚠️   Semantic duplicate decoded='m'  ids=[365, 2369]  raws=['<0x6D>', 'm']
+  ⚠️   Semantic duplicate decoded='n'  ids=[366, 2370]  raws=['<0x6E>', 'n']
+  ⚠️   Semantic duplicate decoded='o'  ids=[367, 2371]  raws=['<0x6F>', 'o']
+  ⚠️   Semantic duplicate decoded='p'  ids=[368, 2372]  raws=['<0x70>', 'p']
+  ⚠️   Semantic duplicate decoded='q'  ids=[369, 2373]  raws=['<0x71>', 'q']
+  ⚠️   Semantic duplicate decoded='r'  ids=[370, 2374]  raws=['<0x72>', 'r']
+  ⚠️   Semantic duplicate decoded='s'  ids=[371, 2375]  raws=['<0x73>', 's']
+  ⚠️   Semantic duplicate decoded='t'  ids=[372, 2376]  raws=['<0x74>', 't']
+  ⚠️   Semantic duplicate decoded='u'  ids=[373, 2377]  raws=['<0x75>', 'u']
+  ⚠️   Semantic duplicate decoded='v'  ids=[374, 2378]  raws=['<0x76>', 'v']
+  ⚠️   Semantic duplicate decoded='w'  ids=[375, 2379]  raws=['<0x77>', 'w']
+  ⚠️   Semantic duplicate decoded='x'  ids=[376, 2380]  raws=['<0x78>', 'x']
+  ⚠️   Semantic duplicate decoded='y'  ids=[377, 2381]  raws=['<0x79>', 'y']
+  ⚠️   Semantic duplicate decoded='z'  ids=[378, 2382]  raws=['<0x7A>', 'z']
+  ⚠️   Semantic duplicate decoded='{'  ids=[379, 2383]  raws=['<0x7B>', '{']
+  ⚠️   Semantic duplicate decoded='|'  ids=[380, 2384]  raws=['<0x7C>', '|']
+  ⚠️   Semantic duplicate decoded='}'  ids=[381, 2385]  raws=['<0x7D>', '}']
+  ⚠️   Semantic duplicate decoded='~'  ids=[382, 2386]  raws=['<0x7E>', '~']
+  ⚠️   Semantic duplicate decoded='\x7f'  ids=[383, 76250]  raws=['<0x7F>', '\x7f']
+  Real semantic duplicate groups : 128
+  Extra redundant token IDs      : 128
+  Byte-fragment groups skipped   : 1  (all decode to U+FFFD — structural GPT-2 BPE artifact, not a defect)
+
+========================================================================
+  TEST 11: Edge Cases / Byte Fallback
+========================================================================
+  ✅ empty                →     0 tok  UNK=0
+  ✅ space                →     1 tok  UNK=0
+  ✅ newline              →     1 tok  UNK=0
+  ✅ tab                  →     1 tok  UNK=0
+  ✅ null byte            →     1 tok  UNK=0
+  ✅ BOM                  →     2 tok  UNK=0
+  ✅ 10K 'a'              →  5000 tok  UNK=0
+  ✅ 100 emoji            →   100 tok  UNK=0
+  ✅ 50 ZWSP              →    50 tok  UNK=0
+  ✅ multi-script         →    13 tok  UNK=0
+  ✅ leading spaces       →     7 tok  UNK=0
+  ✅ trailing spaces      →     8 tok  UNK=0
+  ✅ CRLF                 →    10 tok  UNK=0
+
+========================================================================
+  TEST 12: Tokenizer Config Integrity
+========================================================================
+  ⚠️   model_max_length=131072 — confirm matches model's max_position_embeddings
+  ✅  padding_side = 'right'
+  ✅  truncation_side = 'right'
+  ✅  clean_up_tokenization_spaces = False  (expected False)
+  ✅  Loaded as PreTrainedTokenizerFast
+  ✅  bos_token_id = 0
+  ✅  eos_token_id = 1
+  ✅  pad_token_id = 2
+
+========================================================================
+  TEST 13: Byte-Fallback Rate & Tokens-per-Character Efficiency
+========================================================================
+  ℹ️   Byte-level tokens in vocab: 1,197 / 131,072
+  Corpus total tokens  : 1,952,474,013
+  Corpus byte-fallback : 954,047 (0.05%)
+  ✅ English      (en): 1,787,044,073 tok / 3,812,789,796 chr  (2.13 chr/tok)  byte-fallback=0.1%
+  ✅ Assamese     (as): 873,309 tok / 1,773,865 chr  (2.03 chr/tok)  byte-fallback=0.1%
+  ✅ Punjabi      (pa): 795,811 tok / 1,407,076 chr  (1.77 chr/tok)  byte-fallback=0.0%
+  ✅ Bengali      (bn): 676,941 tok / 1,394,541 chr  (2.06 chr/tok)  byte-fallback=0.0%
+  ✅ Gujarati     (gu): 614,663 tok / 1,135,805 chr  (1.85 chr/tok)  byte-fallback=0.0%
+  ✅ Tamil        (ta): 598,527 tok / 1,365,158 chr  (2.28 chr/tok)  byte-fallback=0.0%
+  ✅ Kannada      (kn): 577,167 tok / 1,211,631 chr  (2.10 chr/tok)  byte-fallback=0.0%
+  ✅ Marathi      (mr): 514,992 tok / 1,089,079 chr  (2.11 chr/tok)  byte-fallback=0.0%
+  ✅ Odia         (or): 497,396 tok / 999,586 chr  (2.01 chr/tok)  byte-fallback=0.0%
+  ✅ Hindi        (hi): 483,804 tok / 908,191 chr  (1.88 chr/tok)  byte-fallback=0.0%
+  ✅ Malayalam    (ml): 379,677 tok / 900,487 chr  (2.37 chr/tok)  byte-fallback=0.0%
+
+  Overall corpus byte-fragment rate : 0.05%  (measured across 1,952,474,013 real corpus tokens)
+  ⚠  This overall figure is dominated by the English share of the corpus (~99%).
+     The per-language breakdown above is the meaningful diagnostic.
+  ✅  Overall corpus rate within expected range (interpret per-language rows for real signal)
+
+========================================================================
+  TEST 14: Numeric Tokenization Analysis
+========================================================================
+  Case                    Input                                Tokens  Token pieces
+  ----------------------  -----------------------------------  ------  ------------------------------
+  single_digit            '7'                                       1  '7'
+  two_digit               '42'                                      2  '4' | '2'
+  three_digit             '123'                                     3  '1' | '2' | '3'
+  four_digit              '1234'                                    4  '1' | '2' | '3' | '4'
+  five_digit              '12345'                                   5  '1' | '2' | '3' | '4' | '5'
+  six_digit               '123456'                                  6  '1' | '2' | '3' | '4' | '5' | '6'
+  large_int               '9876543210'                             10  '9' | '8' | '7' | '6' | '5' | '4' | '3' | '2' | '1' | '0'
+  15_digit                '123456789012345'                        15  '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '0' | '1' | '2' 
+  decimal_2dp             '3.14'                                    1  '3.14'
+  decimal_6dp             '3.141593'                                5  '3.14' | '1' | '5' | '9' | '3'
+  scientific_pos          '1.23e+10'                                6  '1.' | '2' | '3' | 'e+' | '1' | '0'
+  scientific_neg          '9.81e-3'                                 5  '9' | '.8' | '1e' | '-' | '3'
+  price_usd               '$1,234.56'                               8  '$' | '1' | ',' | '2' | '3' | '4' | '.5' | '6'
+  price_inr               '₹99,999.00'                              8  '₹' | '9' | '9' | ',' | '9' | '9' | '9' | '.00'
+  percentage              '95.7%'                                   4  '9' | '5' | '.7' | '%'
+  negative                '-273.15'                                 6  '-' | '2' | '7' | '3' | '.1' | '5'
+  date_iso                '2024-01-15'                             10  '2' | '0' | '2' | '4' | '-' | '0' | '1' | '-' | '1' | '5'
+  date_us                 '01/15/2024'                             10  '0' | '1' | '/' | '1' | '5' | '/' | '2' | '0' | '2' | '4'
+  version                 'v1.2.3'                                  4  'v' | '1.' | '2.' | '3'
+  semver                  '2.0.0-alpha.1'                           6  '2.' | '0.' | '0' | '-' | 'alpha' | '.1'
+  phone_us                '+1-800-555-0199'                        14  '+' | '1' | '-' | '8' | '00' | '-' | '5' | '5' | '5' | '-' | '0' | '1'
+  phone_in                '+91-9876543210'                         14  '+' | '9' | '1' | '-' | '9' | '8' | '7' | '6' | '5' | '4' | '3' | '2' 
+  aadhaar_style           '1234 5678 9012'                         14  '1' | '2' | '3' | '4' | ' ' | '5' | '6' | '7' | '8' | ' ' | '9' | '0' 
+  fraction                '3/4'                                     3  '3' | '/' | '4'
+  equation                'x = (-b ± √(b²-4ac)) / 2a'              22  'x' | ' ' | '=' | ' ' | '(' | '-' | 'b' | ' ' | '±' | ' ' | '√' | '(b'
+  large_scientific        '6.022e23'                                6  '6' | '.0' | '2' | '2e' | '2' | '3'
+  hex                     '0xFF'                                    3  '0' | 'x' | 'FF'
+  binary                  '0b1010'                                  6  '0' | 'b' | '1' | '0' | '1' | '0'
+  octal                   '0o755'                                   5  '0' | 'o' | '7' | '5' | '5'
+  numbers_in_text         'The answer is 42 and pi is 3.14159'      19  'The' | ' ' | 'answer' | ' ' | 'is' | ' ' | '4' | '2' | ' ' | 'and' | 
+  year_range              'FY2023-24 revenue was $4.2B up 12.3% YoY'      29  'F' | 'Y' | '2' | '0' | '2' | '3' | '-' | '2' | '4' | ' ' | 're' | 've
+
+========================================================================
+  TEST 15: Reserved Token Utilization
+========================================================================
+  Total reserved tokens in config: 0
+  ✅  All 0 reserved tokens have 0 frequency in corpus (correct)
+
+========================================================================
+  TEST 16: Special Token Leakage in Pretraining Data
+========================================================================
+  Scanning raw_shard for special token leakage …
+  Scanning: 0batch [00:00, ?batch/s]  Scanning: 1batch [00:00,  3.77batch/s]  Scanning: 2batch [00:00,  3.82batch/s]  Scanning: 3batch [00:00,  3.82batch/s]  Scanning: 4batch [00:01,  3.74batch/s]  Scanning: 5batch [00:01,  3.09batch/s]  Scanning: 6batch [00:01,  2.68batch/s]  Scanning: 7batch [00:02,  2.65batch/s]  Scanning: 8batch [00:02,  2.63batch/s]  Scanning: 9batch [00:03,  2.81batch/s]  Scanning: 10batch [00:03,  2.94batch/s]  Scanning: 11batch [00:03,  3.03batch/s]  Scanning: 12batch [00:03,  3.09batch/s]  Scanning: 13batch [00:04,  3.14batch/s]  Scanning: 14batch [00:04,  3.22batch/s]  Scanning: 15batch [00:04,  3.23batch/s]  Scanning: 16batch [00:05,  3.21batch/s]  Scanning: 17batch [00:05,  3.20batch/s]  Scanning: 18batch [00:05,  3.21batch/s]  Scanning: 19batch [00:06,  3.19batch/s]  Scanning: 20batch [00:06,  3.17batch/s]  Scanning: 21batch [00:06,  3.26batch/s]  Scanning: 22batch [00:06,  3.38batch/s]  Scanning: 23batch [00:07,  3.48batch/s]  Scanning: 24batch [00:07,  3.55batch/s]  Scanning: 25batch [00:07,  3.56batch/s]  Scanning: 26batch [00:08,  3.61batch/s]  Scanning: 27batch [00:08,  3.66batch/s]  Scanning: 28batch [00:08,  3.71batch/s]  Scanning: 29batch [00:08,  3.70batch/s]  Scanning: 30batch [00:09,  3.46batch/s]  Scanning: 31batch [00:09,  3.32batch/s]  Scanning: 32batch [00:09,  3.26batch/s]  Scanning: 33batch [00:10,  3.22batch/s]  Scanning: 34batch [00:10,  3.28batch/s]  Scanning: 35batch [00:10,  3.30batch/s]  Scanning: 36batch [00:11,  3.36batch/s]  Scanning: 37batch [00:11,  3.43batch/s]  Scanning: 38batch [00:11,  3.47batch/s]  Scanning: 39batch [00:11,  3.58batch/s]  Scanning: 40batch [00:12,  3.15batch/s]  Scanning: 41batch [00:12,  2.75batch/s]  Scanning: 42batch [00:13,  2.57batch/s]  Scanning: 43batch [00:13,  2.13batch/s]  Scanning: 44batch [00:15,  1.21batch/s]  Scanning: 45batch [00:16,  1.37batch/s]  Scanning: 46batch [00:16,  1.48batch/s]  Scanning: 47batch [00:17,  1.61batch/s]  Scanning: 48batch [00:17,  1.66batch/s]  Scanning: 49batch [00:17,  2.10batch/s]  Scanning: 50batch [00:18,  2.04batch/s]  Scanning: 51batch [00:18,  2.32batch/s]  Scanning: 52batch [00:18,  2.55batch/s]  Scanning: 53batch [00:19,  2.72batch/s]  Scanning: 54batch [00:19,  2.88batch/s]  Scanning: 55batch [00:19,  2.99batch/s]  Scanning: 56batch [00:20,  3.08batch/s]  Scanning: 57batch [00:20,  3.26batch/s]  Scanning: 58batch [00:20,  3.33batch/s]  Scanning: 59batch [00:20,  3.43batch/s]  Scanning: 60batch [00:21,  3.49batch/s]  Scanning: 61batch [00:21,  3.49batch/s]  Scanning: 62batch [00:21,  3.54batch/s]  Scanning: 63batch [00:22,  3.56batch/s]                                           ✅  No chat special tokens found in 630,140 pretraining rows
+
+========================================================================
+  TEST 17: Adversarial Token Injection Sweep
+========================================================================
+  ✅ [partial — missing closing >             ] injects=<|assistant|>:False  n_tok=6
+  ✅ [space inside                            ] injects=<|assistant|>:False  n_tok=7
+  ✅ [uppercase variant                       ] injects=<|assistant|>:False  n_tok=8
+  ✅ [mixed-case variant                      ] injects=<|assistant|>:False  n_tok=6
+  ✅ [fullwidth angle brackets (U+FF1C/FF1E)  ] injects=<|assistant|>:False  n_tok=10
+  ✅ [fullwidth pipe (U+FF5C)                 ] injects=<|assistant|>:False  n_tok=6
+  ✅ [Cyrillic 'а' instead of Latin 'a'       ] injects=<|assistant|>:False  n_tok=7
+  ✅ [Cyrillic 'а' at position 8              ] injects=<|assistant|>:False  n_tok=8
+  ✅ [Llama-style injection                   ] injects=<|assistant|>:False  n_tok=15
+  ✅ [Alpaca-style injection                  ] injects=<|assistant|>:False  n_tok=4
+  ✅ [chatml partial — no end token           ] injects=<|assistant|>:False  n_tok=8
+  ✅ [null byte inside special token          ] injects=<|assistant|>:False  n_tok=7
+  🔴 [RTL override before token               ] injects=<|assistant|>:True  n_tok=4
+  🔴 [ZWSP after token                        ] injects=<|assistant|>:True  n_tok=2
+  ❌  2 adversarial input(s) produce the real <|assistant|> token ID — SECURITY RISK
+
+========================================================================
+  TEST 18: Cross-Dataset Vocabulary Drift
+========================================================================
+  golden_samples                       exclusive tokens:      2
+  raw_shard                            exclusive tokens:  4,322
+  sft_group1_assamese                  exclusive tokens:      0
+  sft_group1_hindi                     exclusive tokens:      0
+  sft_group1_marathi                   exclusive tokens:      0
+  sft_group1_punjabi                   exclusive tokens:      0
+  sft_group1_telugu                    exclusive tokens:      0
+  sft_group2                           exclusive tokens:      0
+  sft_group3                           exclusive tokens:      0
+  sft_indic_as                         exclusive tokens:      9
+  sft_indic_bn                         exclusive tokens:     10
+  sft_indic_gu                         exclusive tokens:     30
+  sft_indic_hi                         exclusive tokens:      9
+  sft_indic_kn                         exclusive tokens:     72
+  sft_indic_mixed                      exclusive tokens:      7
+  sft_indic_ml                         exclusive tokens:     75
+  sft_indic_mr                         exclusive tokens:     15
+  sft_indic_or                         exclusive tokens:     50
+  sft_indic_pa                         exclusive tokens:     36
+  sft_indic_ta                         exclusive tokens:     37
+  sft_indic_te                         exclusive tokens:    214
+
+========================================================================
+  TEST 19: Token Frequency Long-Tail Analysis
+========================================================================
+  Bucket          # tokens   % vocab     % occ
+  ------------  ----------  --------  --------
+  zero              86,875    66.28%    0.000%
+  once                 107     0.08%    0.000%
+  2–4                  193     0.15%    0.000%
+  5–9                  231     0.18%    0.000%
+  10–99              1,961     1.50%    0.005%
+  100–999           14,746    11.25%    0.395%
+  1K–9K             17,943    13.69%    3.095%
+  10K+               9,016     6.88%   96.505%
+  ℹ️   Zipf ratio (top-10 avg / bottom-10 avg): 89,575,280x
+
+========================================================================
+  TEST 20: Chat Template Robustness
+========================================================================
+  ✅ [single_turn              ] tok= 21  unmasked= 11  spans=1  ok=True
+  ⚠️  [two_turn                 ] tok= 40  unmasked= 29  spans=1  ok=False
+  ⚠️  [three_turn               ] tok= 60  unmasked= 49  spans=1  ok=False
+  ✅ [empty_assistant          ] tok= 17  unmasked=  7  spans=1  ok=True
+  ✅ [system_user_asst         ] tok= 32  unmasked=  9  spans=1  ok=True
+  ⚠️  [consecutive_asst         ] tok= 18  unmasked= 17  spans=1  ok=False
+  ✅ [no_end_turn              ] tok= 12  unmasked=  2  spans=1  ok=True
+
+========================================================================
+  TEST 21: Mixed-Language Within Same Document
+========================================================================
+  ✅ [hi+en          ]   38 tok /   75 chr  (1.97 chr/tok)  rt=OK  UNK=0
+  ✅ [te+en          ]   36 tok /   74 chr  (2.06 chr/tok)  rt=OK  UNK=0
+  ✅ [ta+en+code     ]   41 tok /   83 chr  (2.02 chr/tok)  rt=OK  UNK=0
+  ✅ [hi+ta+en       ]   38 tok /   76 chr  (2.00 chr/tok)  rt=OK  UNK=0
+  ✅ [pa+hi+en       ]   37 tok /   81 chr  (2.19 chr/tok)  rt=OK  UNK=0
+  ✅ [math+hi        ]   45 tok /   74 chr  (1.64 chr/tok)  rt=OK  UNK=0
+  ✅ [code+te+hi     ]   42 tok /   75 chr  (1.79 chr/tok)  rt=OK  UNK=0
+  ✅ [5_scripts      ]   22 tok /   43 chr  (1.95 chr/tok)  rt=OK  UNK=0
+
+========================================================================
+  TEST 22: EOS / BOS Termination Behaviour
+========================================================================
+  ✅ [eos_alone           ]   1 tok  rt=OK  pieces: '<|end_of_text|>'
+  ✅ [bos_alone           ]   1 tok  rt=OK  pieces: '<|begin_of_text|>'
+  ✅ [bos_then_text       ]   4 tok  rt=OK  pieces: '<|begin_of_text|>' | 'Hello' | ' ' | 'world'
+  ✅ [text_then_eos       ]   4 tok  rt=OK  pieces: 'Hello' | ' ' | 'world' | '<|end_of_text|>'
+  ✅ [bos_text_eos        ]   3 tok  rt=OK  pieces: '<|begin_of_text|>' | 'Hello' | '<|end_of_text|>'
+  ✅ [double_eos          ]   2 tok  rt=OK  pieces: '<|end_of_text|>' | '<|end_of_text|>'
+  ✅ [eos_mid_text        ]   3 tok  rt=OK  pieces: 'Before' | '<|end_of_text|>' | 'After'
+  ✅ [pad_in_sequence     ]   3 tok  rt=OK  pieces: '<|pad|>' | 'text' | '<|pad|>'
+
+========================================================================
+  TEST 23: Garbage Token Audit
+========================================================================
+  Scanning all 131,072 vocabulary entries …
+
+  Category                   Count  % of vocab  Sample
+  ──────────────────────  ────────  ──────────  ───────────────────────────────────
+  🔴 mojibake                           3,249      2.479%  'Ã©'
+  🔵 private_use                           10      0.008%  '\ue38d'
+  ✅ surrogate                              0      0.000%  ''
+  🔵 zero_width_noise                       2      0.002%  '\u200b'
+  🔵 zero_width_review (REVIEW)             8      0.006%  '\u200c'
+  🔵 html_artifact                          2      0.002%  '&#'
+  ⚠️  broken_utf8                          129      0.098%  '�'
+  ✅ overlong                               0      0.000%  ''
+  ❌  3,392 garbage tokens (2.59% of vocab) — significant quality issue
+
+========================================================================
+  Writing Reports
+========================================================================
+  JSON report     : report/tokenizer_audit_results.json
+  Freq CSV        : report/token_frequency.csv  (131,072 rows)
+  Per-DS freq CSVs: report/freq_<dataset>.csv
+  Unused tokens   : report/unused_tokens.csv  (86,875 rows)
+  Garbage tokens  : report/garbage_tokens.csv  (3,392 rows)
+  Vocab dump      : report/vocab_dump.txt  (131,072 lines)
+  Golden CSV      : report/golden_sample_token_counts.csv
+  MD report       : report/tokenizer_audit_report.md
+
+========================================================================
+  AUDIT COMPLETE
+========================================================================
+
+  Reports in: /Users/rohanshravan/TSAI/ERAV4/GCPTests/Tokenizer/audit_combined/report
+  ├── tokenizer_audit_report.md
+  ├── tokenizer_audit_results.json
+  ├── token_frequency.csv            (combined, 131,072 rows)
+  ├── freq_<dataset>.csv             (per dataset)
+  ├── unused_tokens.csv
+  ├── garbage_tokens.csv             (3,392 rows — share with team)
+  ├── vocab_dump.txt
+  └── golden_sample_token_counts.csv
+
+  ┌─ Quick Verdict ───────────────────────────────────────────┐
+  │  Round-trip failures  : 0
+  │  Ghost tags in data   : 1  dataset(s) affected
+  │  Vocab unused (overall): 66.3%
+  │  Special token errors : 0
+  │  Multilingual UNK     : 0 total UNK tokens
+  │  SFT masking failures : 1
+  │  Byte-fallback rate   : 0.1%
+  │  Special tok leakage  : CLEAN
+  │  Adversarial injects  : 2 / 14 cases
+  │  Reserved contamination: NONE
+  │  Garbage tokens       : 3,392 (2.588% of vocab)
+  └───────────────────────────────────────────────────────────┘
+
