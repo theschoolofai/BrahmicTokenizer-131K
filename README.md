@@ -3,7 +3,21 @@
 A 131,072-vocabulary byte-level BPE tokenizer that closes the Brahmic compression gap at the 131K-vocabulary class while preserving the English, EU-language, and code compression of OpenAI's o200k_base. Drop-in replacement for any o200k_base training pipeline.
 
 **Model artifact**: <https://huggingface.co/theschoolofai/BrahmicTokenizer-131K>
-**Citation**: [arXiv link to be added on publication]
+**Paper**: <https://arxiv.org/abs/2605.29379>
+
+## Citation
+
+```
+@misc{shravan2026brahmictokenizer,
+  title={BrahmicTokenizer-131K: An Indic-Capable Drop-In Replacement for o200k\_base},
+  author={Rohan Shravan},
+  year={2026},
+  eprint={2605.29379},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2605.29379}
+}
+```
 
 ## Headline results
 
@@ -141,10 +155,6 @@ datasets
 ```
 
 `pip install tokenizers transformers tiktoken pandas pyarrow datasets`
-
-## Citation
-
-[arXiv link to be added on publication]
 
 ## License
 
