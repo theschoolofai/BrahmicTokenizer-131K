@@ -107,6 +107,30 @@ def detect_pre_tokenizer(token_json_path_or_dir):
 
 
 # --- HF backend ---
+def special_ids_from_json(path):
+    """Return IDs marked special in a tokenizer.json added_tokens list."""
+    with open(path, encoding="utf-8") as f:
+        data = json.load(f)
+    return {entry["id"] for entry in data.get("added_tokens", []) if entry.get("special") is True}
+
+
+class JsonTokenizerWrapper:
+    """Expose a tokenizer.json to measure_hf, including its special IDs."""
+
+    def __init__(self, tokenizer, path):
+        self.tokenizer = tokenizer
+        self.all_special_ids = special_ids_from_json(path)
+
+    def get_vocab(self):
+        return self.tokenizer.get_vocab()
+
+    def convert_ids_to_tokens(self, token_id):
+        return self.tokenizer.id_to_token(token_id)
+
+    def decode(self, ids, **kwargs):
+        return self.tokenizer.decode(ids)
+
+
 def measure_hf(tok, max_ids=None):
     """Measure max byte / >32 / cross-script using tokenizer's own decoder."""
     vocab = tok.get_vocab()
@@ -271,12 +295,7 @@ def main(args):
         if os.path.isfile(path) and path.endswith('.json'):
             # Load directly as a fast tokenizer from the JSON file
             ft = FastTok.from_file(path)
-            class W:
-                def __init__(self, ft): self.ft = ft; self.all_special_ids = []
-                def get_vocab(self): return self.ft.get_vocab()
-                def convert_ids_to_tokens(self, i): return self.ft.id_to_token(i)
-                def decode(self, ids, **kw): return self.ft.decode(ids)
-            tok = W(ft)
+            tok = JsonTokenizerWrapper(ft, path)
             pre = detect_pre_tokenizer(path)
         elif os.path.isdir(path):
             tok = AutoTokenizer.from_pretrained(path, trust_remote_code=True)
@@ -324,20 +343,10 @@ def main(args):
                 stats = measure_tiktoken(loc)
                 pre = "tiktoken (BPE)"
             elif kind == "hf-local-json":
-                tok = AutoTokenizer.from_pretrained(os.path.dirname(loc), trust_remote_code=trc) \
-                    if os.path.dirname(loc) else AutoTokenizer.from_pretrained(loc, trust_remote_code=trc)
-                # Note: hf-local-json might not have config; use direct fast loader
+                # A tokenizer.json may have no HF config; load it directly.
                 from tokenizers import Tokenizer as FastTok
                 ft = FastTok.from_file(loc)
-                # Build a minimal wrapper that supports .get_vocab / .decode / .convert_ids_to_tokens / .all_special_ids
-                class W:
-                    def __init__(self, ft):
-                        self.ft = ft
-                        self.all_special_ids = []
-                    def get_vocab(self): return self.ft.get_vocab()
-                    def convert_ids_to_tokens(self, i): return self.ft.id_to_token(i)
-                    def decode(self, ids, **kw): return self.ft.decode(ids)
-                stats = measure_hf(W(ft))
+                stats = measure_hf(JsonTokenizerWrapper(ft, loc))
                 pre = detect_pre_tokenizer(loc)
             else:
                 tok = AutoTokenizer.from_pretrained(loc, trust_remote_code=trc)
